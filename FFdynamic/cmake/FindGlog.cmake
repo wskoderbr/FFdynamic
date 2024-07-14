@@ -222,7 +222,7 @@ if (GLOG_PREFER_EXPORTED_GLOG_CMAKE_CONFIGURATION)
   if (FOUND_INSTALLED_GLOG_CMAKE_CONFIGURATION)
     glog_message(STATUS "Detected glog version: ${glog_VERSION}")
     set(GLOG_FOUND ${glog_FOUND})
-    # glog wraps the include directories into the exported glog::glog target.
+    # glog wraps the include directories into the exported Glog::Glog target.
     set(GLOG_INCLUDE_DIR "")
     set(GLOG_LIBRARY Glog::Glog)
   else (FOUND_INSTALLED_GLOG_CMAKE_CONFIGURATION)
@@ -323,10 +323,10 @@ if (NOT GLOG_FOUND)
       "${GLOG_LIBRARY} does not match glog.")
   endif (GLOG_LIBRARY AND
     NOT "${LOWERCASE_GLOG_LIBRARY}" MATCHES ".*glog[^/]*")
-  # add glog::glog target
-  add_library(glog::glog INTERFACE IMPORTED)
-  target_include_directories(glog::glog INTERFACE ${GLOG_INCLUDE_DIRS})
-  target_link_libraries(glog::glog INTERFACE ${GLOG_LIBRARY})
+  # add Glog::Glog target
+  add_library(Glog::Glog INTERFACE IMPORTED)
+  target_include_directories(Glog::Glog INTERFACE ${GLOG_INCLUDE_DIRS})
+  target_link_libraries(Glog::Glog INTERFACE ${GLOG_LIBRARY})
   glog_reset_find_library_prefix()
 endif(NOT GLOG_FOUND)
 # Set standard CMake FindPackage variables if found.
