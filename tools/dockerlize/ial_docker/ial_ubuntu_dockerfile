@@ -20,7 +20,7 @@ ARG        LD_LIBRARY_PATH=/opt/ffmpeg/lib
 ARG        PREFIX=/opt/ffmpeg
 
 ENV        FFMPEG_VERSION=4.0.2 \
-           X265_VERSION=3.2
+           X265_VERSION=2.3
 
 ## x264 http://www.videolan.org/developers/x264.html
 RUN \
