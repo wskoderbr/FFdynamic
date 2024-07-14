@@ -34,8 +34,8 @@ add_library(davtools::davtools ALIAS davtools)
 target_link_libraries(davtools PUBLIC FFmpeg::FFmpeg)
 target_compile_features(davtools PUBLIC cxx_auto_type cxx_lambdas)
 target_compile_options(davtools
-  PUBLIC $<$<CXX_COMPILER_ID:GNU>:-Wall -Wpedantic -O3 -fPIC>
-  PUBLIC $<$<CXX_COMPILER_ID:Clang>:-Wall -Wpedantic -O3>)
+  PUBLIC $<$<CXX_COMPILER_ID:GNU>: -Wall -Wpedantic -O3 -fPIC>
+  PUBLIC $<$<CXX_COMPILER_ID:Clang>: -Wall -Wpedantic -O3>)
 
 # register package in user's package registry
 export(PACKAGE Davtools)

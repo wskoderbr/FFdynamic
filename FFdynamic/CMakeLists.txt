@@ -83,11 +83,11 @@ target_include_directories(ffdynamic
 
 add_library(ffdynamic::ffdynamic ALIAS ffdynamic)
 
-target_link_libraries(ffdynamic PUBLIC FFmpeg::FFmpeg Glog::Glog))
+target_link_libraries(ffdynamic PUBLIC FFmpeg::FFmpeg Glog::Glog)
 target_compile_features(ffdynamic PUBLIC cxx_auto_type cxx_lambdas cxx_variadic_templates)
 target_compile_options(ffdynamic
-  PUBLIC $<$<CXX_COMPILER_ID:GNU>:-Wall -Wpedantic -g -O2 -fPIC>
-  PUBLIC $<$<CXX_COMPILER_ID:Clang>:-Wall -Wpedantic -g -O2>
+  PUBLIC $<$<CXX_COMPILER_ID:GNU>: -Wall -Wpedantic -g -O2 -fPIC>
+  PUBLIC $<$<CXX_COMPILER_ID:Clang>: -Wall -Wpedantic -g -O2>
   )
 
 #### Installation #########################################################
