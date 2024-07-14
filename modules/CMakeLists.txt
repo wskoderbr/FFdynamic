@@ -83,8 +83,7 @@ target_link_libraries(module_plugin PUBLIC ffdynamic::ffdynamic ${DEPEND_LIBS})
 target_compile_features(module_plugin PUBLIC cxx_auto_type cxx_lambdas cxx_variadic_templates)
 target_compile_options(module_plugin
   PUBLIC $<$<CXX_COMPILER_ID:GNU>:-Wall -Wpedantic -g -O2 -fPIC>
-  PUBLIC $<$<CXX_COMPILER_ID:Clang>:-Wall -Wpedantic -g -O2>
-  )
+  PUBLIC $<$<CXX_COMPILER_ID:Clang>:-Wall -Wpedantic -g -O2>)
 
 ################################################
 # TESTS: each plugin module has an accompany test
