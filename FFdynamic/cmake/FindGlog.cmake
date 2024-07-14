@@ -224,7 +224,7 @@ if (GLOG_PREFER_EXPORTED_GLOG_CMAKE_CONFIGURATION)
     set(GLOG_FOUND ${glog_FOUND})
     # glog wraps the include directories into the exported glog::glog target.
     set(GLOG_INCLUDE_DIR "")
-    set(GLOG_LIBRARY glog::glog)
+    set(GLOG_LIBRARY Glog::Glog)
   else (FOUND_INSTALLED_GLOG_CMAKE_CONFIGURATION)
     glog_message(STATUS "Failed to find an installed/exported CMake "
       "configuration for glog, will perform search for installed glog "

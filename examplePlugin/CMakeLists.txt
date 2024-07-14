@@ -13,8 +13,8 @@ if(NOT TARGET FFmpeg::FFmpeg)
 endif()
 
 find_package(Glog REQUIRED)
-if(NOT TARGET glog::glog)
-  message(FATAL_ERROR, "Cannot find glog::glog target")
+if(NOT TARGET Glog::Glog)
+  message(FATAL_ERROR, "Cannot find Glog::Glog target")
 endif()
 
 find_package(FFdynamic REQUIRED)

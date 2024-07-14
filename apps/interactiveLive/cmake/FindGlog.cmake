@@ -1,4 +1,3 @@
-# Ceres Solver - A fast non-linear least squares minimizer
 # Copyright 2023 Google Inc. All rights reserved.
 # http://ceres-solver.org/
 #
@@ -222,9 +221,9 @@ if (GLOG_PREFER_EXPORTED_GLOG_CMAKE_CONFIGURATION)
   if (FOUND_INSTALLED_GLOG_CMAKE_CONFIGURATION)
     glog_message(STATUS "Detected glog version: ${glog_VERSION}")
     set(GLOG_FOUND ${glog_FOUND})
-    # glog wraps the include directories into the exported glog::glog target.
+    # glog wraps the include directories into the exported Glog::Glog target.
     set(GLOG_INCLUDE_DIR "")
-    set(GLOG_LIBRARY glog::glog)
+    set(GLOG_LIBRARY Glog::Glog)
   else (FOUND_INSTALLED_GLOG_CMAKE_CONFIGURATION)
     glog_message(STATUS "Failed to find an installed/exported CMake "
       "configuration for glog, will perform search for installed glog "
